@@ -47,117 +47,121 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /** Your CSS Below **/
-
-.insidepage{
-  background-color:white;
-  padding: 40px;
-  margin:130px;
-  border-radius: 30px;
-  --font-paragraph: 16px;
-  --font-header: 32px;
-  --font-sub-header: 24px;
-  --fw-regular: 400;
-  --fw-bold: 600;
-  --fw-black: 700;
+body {
+  background-color: var(--clr-stone100);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: var(--font-paragraph);
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 2rem;
 }
 
-body {
-  background-color:var(--clr-stone100);
-  margin: auto;
-  justify-content: center;
-  width: var(--width-desktop);
- 
-}   
+.insidepage {
+  background-color: white;
+  padding: 40px;
+  margin: 50px auto;
+  border-radius: 30px;
+  max-width: var(--width-desktop);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
 
 img {
-  align-items: center;
-  margin:auto;
-  padding: 0px;
+  display: block;
+  margin: auto;
+  padding: 0;
   border-radius: 20px;
   margin-bottom: 20px;
-  max-width: 100%; 
-  height: auto; 
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
-h3 {
-  color:var(--clr-rose800)
-}
-
- .preparation{
-  background-color:var(--clr-rose50);
-  max-width: 600px;
-  border-radius: 10px;
-  padding:25px;
-  line-height: 35px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  color: var(--clr-stone600);
-
+h1 {
+  font-size: var(--font-header);
+  margin-bottom: 10px;
 }
 
 h2 {
+  font-size: var(--font-sub-header);
+  color: var(--clr-rose800);
+  margin-top: 25px;
+}
+
+h3 {
+  font-size: 20px;
   color: var(--clr-rose800);
 }
 
-.ingredients{
-margin: px;
-line-height: 35px;
-margin-bottom: 25px;
-color:var(--clr-stone600)
-}
-
-
-ul ::marker{
-  color:var(--clr-rose800);
-  font-weight: bold;
-}
-
-ol ::marker {
-  color:var(--clr-rose800);
-  font-weight: bold;
-}
-h2 {
-  margin-top: 25px;
-}
-
-
-.instructions{
-  padding: 0px;
-  margin: 5px;
-  margin-top: 25px;
-  margin-bottom: 25px;
+p {
   color: var(--clr-stone600);
-    
+  line-height: 1.6;
+}
+
+.preparation {
+  background-color: var(--clr-rose50);
+  max-width: 600px;
+  border-radius: 10px;
+  padding: 25px;
+  line-height: 1.8;
+  margin: 25px 0;
+  color: var(--clr-stone600);
 }
 
 
-table{
+.ingredients {
+  margin-bottom: 25px;
+  line-height: 1.8;
+  color: var(--clr-stone600);
+}
+
+
+.instructions {
+  margin: 25px 0;
+  color: var(--clr-stone600);
+  line-height: 1.8;
+}
+
+
+ul::marker,
+ol::marker {
+  color: var(--clr-rose800);
+  font-weight: bold;
+}
+
+
+table {
   width: 80%;
   margin: 20px auto;
-  color:var(--clr-stone600);
-}
-
-th, td{
-  border-bottom: 1px solid black;
+  color: var(--clr-stone600);
   border-collapse: collapse;
+}
+
+th, td {
+  border-bottom: 1px solid #ccc;
   padding: 8px;
+  text-align: left;
 }
 
-th, td ::marker{
-  color:var(--clr-rose800)
+/* Attribution */
+.attribution {
+  margin-top: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #999;
 }
 
-@media( max-width:var(--width-mobile)){
-  body{
 
-    padding: min(5em, 10%);
+@media (max-width: var(--width-mobile)) {
+  body {
+    padding: 1rem;
+  }
 
+  .insidepage {
+    margin: 20px;
+    padding: 20px;
   }
 }
-
-
-
 
 
 /** Attribution CSS **/
